@@ -1,0 +1,63 @@
+.footer {
+    background: #444240;
+    padding: 79px 0 67px 0;
+
+    &__container {
+        max-width: 1030px !important;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__logo {
+        margin-bottom: 22px;
+
+    }
+
+    &__tel {
+
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    &__address {
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(255, 255, 255, 0.75);
+        margin-top: 15px;
+
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 33px;
+    }
+
+    &__list {
+        li {
+            margin-bottom: 15px;
+        }
+    }
+
+
+    &__link {
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(255, 255, 255, 0.75);
+
+    }
+
+}

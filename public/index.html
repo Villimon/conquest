@@ -2,13 +2,39 @@
 <html lang="en">
 
 
-@@include('html/head.html', {
-"title":"Главная"
-})
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
 
 <body>
     <div class="wrapper">
-        @@include('html/header.html', {})
+        <header class="header">
+    <div class="header__container container">
+        <a href="/" class="header__logo">
+            <img src="../img/logo.svg">
+        </a>
+        <nav class="header__menu">
+            <ul class="header__list">
+                <li><a href="#" class="header__link">Каталог</a></li>
+                <li><a href="#" class="header__link">Акции</a></li>
+                <li><a href="#" class="header__link">Доставка</a></li>
+                <li><a href="#" class="header__link">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__block">
+            <a href="#" class="header__icons _icons-search"></a>
+            <div class="header__like">
+                <a href="#" class="header__icons _icons-like"></a>
+                <div class="header__selected">1</div>
+            </div>
+            <a href="#" class="header__icons _icons-basket"></a>
+        </div>
+    </div>
+</header>
         <main class="page">
 
             <section class="fullscreen">
@@ -144,7 +170,46 @@
 
 
         </main>
-        @@include('html/footer.html', {})
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__row">
+            <div class="footer__column">
+                <div class="footer__logo">
+                    <img src="../img/logo-white.png" alt="">
+                </div>
+                <a href="84994504797" class="footer__tel">8 (499) 450-47-97</a>
+                <a href="info@conquest.watch.ru" class="footer__address">info@conquest.watch.ru</a>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">о компании</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Наши магазины</a></li>
+                    <li><a href="#" class="footer__link">Вакансии</a></li>
+                    <li><a href="#" class="footer__link">Сертификаты</a></li>
+                    <li><a href="#" class="footer__link">Отзывы</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">покупателям</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Каталог товаров</a></li>
+                    <li><a href="#" class="footer__link">Как заказать?</a></li>
+                    <li><a href="#" class="footer__link">FAQ</a></li>
+                    <li><a href="#" class="footer__link">Корпоративным клиентам</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__title">оплата и доставка</h3>
+                <ul class="footer__list">
+                    <li><a href="#" class="footer__link">Способы оплаты</a></li>
+                    <li><a href="#" class="footer__link">Время доставки</a></li>
+                    <li><a href="#" class="footer__link">Гарантии и ремонт</a></li>
+                    <li><a href="#" class="footer__link">Возврат и компенсация</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
     </div>
     <script src="js/app.min.js"></script>
 </body>

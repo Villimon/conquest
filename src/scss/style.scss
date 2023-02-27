@@ -1,7 +1,475 @@
-// @import "fonts";
-@import "header"; 
+//<import>=======================================>
+@import "header";
+@import "footer";
+@import "null";
+@import "icons";
+@import "fonts";
+//</import>=======================================>
 
+
+//<Шрифт по умолчанию>===========================>
+$fontFamaly: "Roboto";
+$fontSize: "16px";
+//</Шрифт по умолчанию>===========================>
+
+
+//<Переменные>=======================================>
+$minWidth: 320;
+$maxWidth: 1366;
+$maxWidthContainer: 1200;
+// $md1: $maxWidthContainer + 12;
+// $md2: 991.98;
+// $md3: 767.98;
+// $md4: 479.98;
+//</Переменные>=======================================>
+
+
+
+//<Основная сетка>=======================================>
 body {
-    background-color: rgb(143, 69, 69);
-    color: rgb(31, 17, 17);
+    font-family: $fontFamaly;
+    font-size: $fontSize;
 }
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: $maxWidthContainer + 12px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    // @media (max-width:$md1+px) {
+    //     max-width: 970px;
+    // }
+
+    // @media (max-width:$md2+px) {
+    //     max-width: 750px;
+    // }
+
+    // @media (max-width:$md3+px) {
+    //     max-width: none;
+    //     padding: 0 10px;
+    // }
+}
+
+//</Основная сетка>=======================================>
+
+
+
+//<Основной блок>=======================================>
+.page {
+    flex: 1 1 auto;
+}
+
+
+//<Fullscreen>=======================================>
+
+.fullscreen {
+    background: url('../img/Ellipse.png') center no-repeat;
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 55px;
+    }
+
+    &__title {
+        font-size: 45px;
+        line-height: 60px;
+        color: #1B1A17;
+        margin-bottom: 16px;
+        position: relative;
+
+        &::before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: -65px;
+            width: 50px;
+            height: 1px;
+            background-color: #8B8371;
+        }
+    }
+
+    &__lable {
+        font-size: 30px;
+        line-height: 40px;
+        color: #1B1A17;
+        margin-bottom: 39px;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(27, 26, 23, 0.82);
+        margin-bottom: 65px;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        width: 205px;
+        height: 64px;
+        background: #444240;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        line-height: 22px;
+        color: #1B1A17;
+
+
+    }
+
+    &__price {
+        display: flex;
+        align-items: start;
+
+        p {
+            display: flex;
+            align-items: center;
+            margin-top: 138px;
+            margin-right: -50px;
+
+            &::after {
+                content: ' ';
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: #8B8371;
+                margin-left: 15px;
+            }
+        }
+
+    }
+
+    &__img {
+        height: 100vh;
+
+        img {
+            height: 100%;
+            width: 100%;
+
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: end;
+
+        p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 116px;
+            margin-left: -50px;
+
+            &::before {
+                content: ' ';
+                display: block;
+                width: 50px;
+                height: 1px;
+                background-color: #8B8371;
+                margin-right: 15px;
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+//</Fullscreen>=======================================>
+
+
+
+//<Popular>=======================================>
+
+.popular {
+    padding: 74px 0 125px 0;
+
+    &__title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 43px;
+        color: #1B1A17;
+    }
+
+    &__watch {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 25px;
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: #444240;
+            border-bottom: 1px solid #C4C0B6;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        margin: -42px -42px;
+        flex-wrap: wrap;
+    }
+
+    &__column {
+        padding: 42px 42px;
+    }
+
+}
+
+
+.item-popular {
+    background: #FDFDFB;
+
+    &__name {
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color: rgba(27, 26, 23, 0.82);
+        margin-bottom: 10px;
+    }
+
+    &__price {
+        font-size: 12px;
+        line-height: 16px;
+        color: rgba(27, 26, 23, 0.82);
+        margin-bottom: 5px;
+    }
+
+    &__img {
+        width: 313px;
+        height: 313px;
+        background: url('../img/Ellipse\ \(1\).png');
+        margin-bottom: 20px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__more {
+        a {
+            line-height: 21px;
+            color: #1B1A17;
+            display: flex;
+            align-items: center;
+
+            &::before {
+                content: ' ';
+                display: block;
+                width: 30px;
+                height: 1px;
+                background-color: #8B8371;
+                margin-right: 18px;
+            }
+        }
+    }
+
+}
+
+
+
+//</Popular>=======================================>
+
+
+
+
+
+//<Slider>=======================================>
+
+
+.slider {
+    padding: 52px 0;
+    background: linear-gradient(to right,
+            #F7F5EF 0%,
+            #F7F5EF 30%,
+            #FDFDFB 30%,
+            #FDFDFB 100%);
+    position: relative;
+
+    &__container {
+        display: flex;
+    }
+
+    &__img {
+        width: 521px;
+        height: 414px;
+        margin-right: 70px;
+        margin-bottom: 20px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__arrays {
+        display: flex;
+        justify-content: end;
+        margin-right: 150px;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+
+    &__body {
+        width: 380px;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 43px;
+        color: #1B1A17;
+        margin-bottom: 38px;
+    }
+
+    &__text {
+        line-height: 150%;
+        color: #444240;
+        margin-bottom: 45px;
+    }
+
+    &__btn {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        color: #FFFFFF;
+        width: 205px;
+        height: 64px;
+        background: #D4B098;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__eclipse {
+        position: absolute;
+
+        &-1 {
+            bottom: 0;
+            right: 0;
+        }
+
+        &-2 {
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+
+//</Slider>=======================================>
+
+//<News>=======================================>
+
+
+
+.news {
+    padding: 81px 0 90px 0;
+
+    &__container {
+        display: flex;
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+        margin-right: 70px;
+    }
+
+    &__title {
+        font-size: 32px;
+        line-height: 43px;
+        color: #1B1A17;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        line-height: 27px;
+        color: #444240;
+        margin-bottom: 125px;
+        width: 370px;
+    }
+
+    &__social {
+        display: flex;
+    }
+
+    &__icon {
+        margin-right: 18px;
+    }
+
+    &__right {
+        display: flex;
+    }
+
+    &__small-img {
+        margin-right: 10px;
+    }
+
+    &__img-small {
+        width: 242px;
+        height: 228px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    &__img-big {
+        width: 377px;
+        height: 460px;
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+}
+
+
+//</News>=======================================>
+
+
+//</Основной блок>=======================================>
